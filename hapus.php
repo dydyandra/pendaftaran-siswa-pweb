@@ -4,14 +4,14 @@ include("config.php");
 
 if( isset($_GET['id']) ){
 
-    // ambil id dari query string
+    // get id from query
     $id = $_GET['id'];
 
-    // buat query hapus
+    // delete query
     $sql = "DELETE FROM calon_siswa WHERE id=$id";
     $query = mysqli_query($db, $sql);
 
-    // apakah query hapus berhasil?
+   // if success
     if( $query ){
         header('Location: list-siswa.php');
     } else {

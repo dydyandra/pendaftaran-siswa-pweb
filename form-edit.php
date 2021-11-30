@@ -2,20 +2,20 @@
 
 include("config.php");
 
-// kalau tidak ada id di query string
+// if error
 if (!isset($_GET['id'])) {
     header('Location: list-siswa.php');
 }
 
-//ambil id dari query string
+// get id from query
 $id = $_GET['id'];
 
-// buat query untuk ambil data dari database
+// select query to get data from id 
 $sql = "SELECT * FROM calon_siswa WHERE id=$id";
 $query = mysqli_query($db, $sql);
 $siswa = mysqli_fetch_assoc($query);
 
-// jika data yang di-edit tidak ditemukan
+// if not found
 if (mysqli_num_rows($query) < 1) {
     die("data tidak ditemukan...");
 }

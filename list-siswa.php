@@ -59,7 +59,7 @@
             <tbody>
 
                 <?php
-                $sql = "SELECT * FROM calon_siswa";
+                $sql = "SELECT * FROM calon_siswa"; // query to get all data 
                 $query = mysqli_query($db, $sql);
 
                 while ($siswa = mysqli_fetch_array($query)) {

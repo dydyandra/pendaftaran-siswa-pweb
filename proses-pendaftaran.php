@@ -2,7 +2,7 @@
 
 include("config.php");
 
-// cek apakah tombol daftar sudah diklik atau blum?
+// if register is successful
 if(isset($_POST['daftar'])){
 
     // ambil data dari formulir
@@ -12,16 +12,16 @@ if(isset($_POST['daftar'])){
     $agama = $_POST['agama'];
     $sekolah = $_POST['sekolah_asal'];
 
-    // buat query
+    // query to insert new data
     $sql = "INSERT INTO calon_siswa (nama, alamat, jenis_kelamin, agama, sekolah_asal) VALUE ('$nama', '$alamat', '$jk', '$agama', '$sekolah')";
     $query = mysqli_query($db, $sql);
 
-    // apakah query simpan berhasil?
+    // if success
     if( $query ) {
-        // kalau berhasil alihkan ke halaman index.php dengan status=sukses
+        //redirect to index.php with status=sukses
         header('Location: index.php?status=sukses');
     } else {
-        // kalau gagal alihkan ke halaman indek.php dengan status=gagal
+        // if fail, redirect with status gagal
         header('Location: index.php?status=gagal');
     }
 

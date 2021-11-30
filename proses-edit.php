@@ -13,16 +13,16 @@ if(isset($_POST['simpan'])){
     $agama = $_POST['agama'];
     $sekolah = $_POST['sekolah_asal'];
 
-    // buat query update
+    // query update
     $sql = "UPDATE calon_siswa SET nama='$nama', alamat='$alamat', jenis_kelamin='$jk', agama='$agama', sekolah_asal='$sekolah' WHERE id=$id";
     $query = mysqli_query($db, $sql);
 
-    // apakah query update berhasil?
+    // if success
     if( $query ) {
-        // kalau berhasil alihkan ke halaman list-siswa.php
+       
         header('Location: list-siswa.php');
     } else {
-        // kalau gagal tampilkan pesan
+        // if failed
         die("Gagal menyimpan perubahan...");
     }
 
