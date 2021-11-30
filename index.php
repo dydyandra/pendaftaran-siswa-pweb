@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Pendaftaran Siswa Baru | SMK Coding</title>
+    <title>Pendaftaran Siswa Baru</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
@@ -15,7 +15,7 @@
 <body class="d-flex min-vh-100 flex-column aligns-items-center justify-content-center text-center">
     <header>
         <h3>Pendaftaran Siswa Baru</h3>
-        <h1>SMK Coding</h1>
+        <h1>Universitas</h1>
     </header>
 
     <div class="container p-0 card shadow border-0 rounded" style="max-width: 30rem;">

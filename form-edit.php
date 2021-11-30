@@ -27,16 +27,18 @@ if (mysqli_num_rows($query) < 1) {
 <html>
 
 <head>
-    <title>Formulir Edit Siswa | SMK Coding</title>
+    <title>Formulir Edit Siswa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         textarea {
             width: 100%;
         }
+
         input.a {
             width: 100%;
         }
+
         body {
             background-image: linear-gradient(120deg, #FFE599 0%, #F1C232 100%);
         }
@@ -44,6 +46,21 @@ if (mysqli_num_rows($query) < 1) {
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="pendaftaran">Pendaftaran Siswa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="d-flex min-vh-100 flex-column aligns-items-center justify-content-center">
         <div class="container p-0 card shadow border-0 rounded" style="max-width: 30rem;">
             <div class="card-header text-white bg-dark bg">
@@ -51,9 +68,9 @@ if (mysqli_num_rows($query) < 1) {
             </div>
             <form action="proses-edit.php" method="POST" class="form-group">
                 <div class="form-group mt-3 mx-2">
-                    <input class = "a" type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />
+                    <input class="a" type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />
                     <label for="nama">Nama: </label><br>
-                    <input class = "a" type="text" name="nama" placeholder="nama lengkap" size="55" value="<?php echo $siswa['nama'] ?>" />
+                    <input class="a" type="text" name="nama" placeholder="nama lengkap" size="55" value="<?php echo $siswa['nama'] ?>" />
                 </div>
                 <div class="form-group mt-3 mx-2">
                     <p>
@@ -87,12 +104,12 @@ if (mysqli_num_rows($query) < 1) {
                 <div class="form-group mt-3 mx-2 my-4">
                     <p>
                         <label for="sekolah_asal">Sekolah Asal: </label><br>
-                        <input class = "a" size="55" type="text" name="sekolah_asal" placeholder="nama sekolah" value="<?php echo $siswa['sekolah_asal'] ?>" />
+                        <input class="a" size="55" type="text" name="sekolah_asal" placeholder="nama sekolah" value="<?php echo $siswa['sekolah_asal'] ?>" />
                     </p>
                 </div>
 
                 <div class="form-group mt-3 mx-2 my-4">
-                    <input class = "a btn btn-dark" type="submit" value="Simpan" name="simpan" />
+                    <input class="a btn btn-dark" type="submit" value="Simpan" name="simpan" />
                 </div>
 
             </form>
