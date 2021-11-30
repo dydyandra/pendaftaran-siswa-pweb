@@ -19,7 +19,7 @@
     <div class="d-flex min-vh-100 flex-column aligns-items-center justify-content-center">
         <div class="container p-0 card shadow border-0 rounded" style="max-width: 30rem;">
             <div class="card-header bg">
-                <h3>Formulir Edit Siswa</h3>
+                <h3>Formulir Siswa Baru</h3>
             </div>
             <form action="proses-pendaftaran.php" method="POST">
                 <div class="form-group mt-3 mx-2">
