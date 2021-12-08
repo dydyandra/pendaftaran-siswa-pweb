@@ -66,7 +66,7 @@ if (mysqli_num_rows($query) < 1) {
             <div class="card-header text-white bg-dark bg">
                 <h3>Formulir Edit Siswa</h3>
             </div>
-            <form action="proses-edit.php" method="POST" class="form-group">
+            <form action="proses-edit.php" method="POST" class="form-group" enctype = "multipart/form-data">
                 <div class="form-group mt-3 mx-2">
                     <input class="a" type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />
                     <label for="nama">Nama: </label><br>
@@ -105,6 +105,13 @@ if (mysqli_num_rows($query) < 1) {
                     <p>
                         <label for="sekolah_asal">Sekolah Asal: </label><br>
                         <input class="a" size="55" type="text" name="sekolah_asal" placeholder="nama sekolah" value="<?php echo $siswa['sekolah_asal'] ?>" />
+                    </p>
+                </div>
+
+                <div class="form-group mt-3 mx-2 my-4">
+                    <p>
+                        <label for="foto">Foto: </label><br>
+                        <input class="a" type="file" name="foto"/>
                     </p>
                 </div>
 

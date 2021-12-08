@@ -53,6 +53,7 @@
                     <th>Jenis Kelamin</th>
                     <th>Agama</th>
                     <th>Sekolah Asal</th>
+                    <th>Pas Foto</th>
                     <th>Tindakan</th>
                 </tr>
             </thead>
@@ -71,7 +72,7 @@
                     echo "<td>" . $siswa['jenis_kelamin'] . "</td>";
                     echo "<td>" . $siswa['agama'] . "</td>";
                     echo "<td>" . $siswa['sekolah_asal'] . "</td>";
-
+                    echo "<td><img src='images/".$siswa['foto']."' width='100' height='100'></td>"; 
                     echo "<td>";
                     echo "<a class='btn btn-dark mx-1' href='form-edit.php?id=" . $siswa['id'] . "'>Edit</a>";
                     echo "<a class='btn btn-danger' href='hapus.php?id=" . $siswa['id'] . "'>Hapus</a>";

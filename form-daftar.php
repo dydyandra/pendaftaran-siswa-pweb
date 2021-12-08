@@ -37,7 +37,7 @@
             <div class="card-header bg">
                 <h3>Formulir Siswa Baru</h3>
             </div>
-            <form action="proses-pendaftaran.php" method="POST">
+            <form action="proses-pendaftaran.php" method="POST" enctype = "multipart/form-data">
                 <div class="form-group mt-3 mx-2">
                     <p>
                         <label for="nama">Nama: </label>
@@ -78,7 +78,14 @@
                 </div>
 
                 <div class="form-group mt-3 mx-2 my-4">
-                    <input class="a btn btn-dark" type="submit" value="Daftar" name="daftar" />
+                    <p>
+                        <label for="foto">Pas Foto: </label>
+                        <input type="file" name="foto"/>
+                    </p>
+                </div>
+
+                <div class="form-group mt-3 mx-2 my-4">
+                    <input class="a btn btn-dark" type="submit" value="Daftar" name="daftar"/>
                 </div>
 
             </form>
